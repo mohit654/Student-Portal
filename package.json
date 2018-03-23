@@ -1,0 +1,16 @@
+{
+  "name": "es6class",
+  "version": "1.0.0",
+  "description": "This tells us about the student details",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel js/* -d ES6" 
+  },
+  "author": "Mohit",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1"
+  }
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Page Title</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <h1 class="text-center">Student Online Portal</h1><br/><br/>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body onload="showData()">
+    <div class="container">
+        <div class="text-center">
+            <button type = "button" class="btn btn-primary btn-lg" id = "enter">Enter Data</button>
+            <button type = "button" class="btn btn-primary btn-lg" id = "edit">Edit Data</button>
+            <button type = "button" class="btn btn-primary btn-lg" id = "delete">Delete Data</button>
+            <button type = "button" class="btn btn-danger btn-lg" id = "del" style="display: none">Delete Data</button>
+        </div><br/>
+
+        <div>
+                <form id = "form" style="display: none">
+                    <div class="form-group">
+                      <label for="name">Student Name:</label>
+                      <input type="text" class="form-control" id="name" required pattern="[A-Za-z]{3,}" title="Characters Only">
+                    </div>
+                    <div class="form-group">
+                      <label for="roll_no">Roll No:</label>
+                      <input type="text" class="form-control" id="roll" required pattern="[0-9]{10}" title="Ten digits">
+                    </div>
+                    <div class="form-group">
+                            <label for="Year">Passout Year:</label>
+                            <input type="text" class="form-control" id="year" required pattern="[0-9]{4}" title="valid year">
+                    </div>
+                    <div class="form-group">
+                            <label for="stream">Stream:</label>
+                            <input type="text" class="form-control" id="stream" required pattern="[A-Za-z]{3,}" title="Characters Only">
+                    </div>
+                    <button type="submit" class="btn btn-default" id="submit" onclick="getData()">Submit</button>
+                  </form>
+        </div>
+
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Student Name</th>
+                    <th>Roll Number</th>
+                    <th>Passout Year</th>
+                    <th>Stream</th>
+                </tr>
+            </thead>
+            <tbody id = "rows">
+                
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
