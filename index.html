@@ -23,22 +23,22 @@
         </div><br/>
 
         <div>
-                <form id = "form" style="display: none">
+                <form id = "form" style="display: none" data-toggle="validator">
                     <div class="form-group">
                       <label for="name">Student Name:</label>
-                      <input type="text" class="form-control" id="name" required pattern="[A-Za-z]{3,}" title="Characters Only">
+                      <input type="text" class="form-control" id="name" required pattern="[A-Za-z]{3,}" title="Characters Only"/>
                     </div>
                     <div class="form-group">
                       <label for="roll_no">Roll No:</label>
-                      <input type="text" class="form-control" id="roll" required pattern="[0-9]{10}" title="Ten digits">
+                      <input type="number" class="form-control" id="roll" required pattern="[0-9]{10}" title="Ten digits"/>
                     </div>
                     <div class="form-group">
                             <label for="Year">Passout Year:</label>
-                            <input type="text" class="form-control" id="year" required pattern="[0-9]{4}" title="valid year">
+                            <input type="number" class="form-control" id="year" required pattern="[0-9]{4}" title="valid year"/>
                     </div>
                     <div class="form-group">
                             <label for="stream">Stream:</label>
-                            <input type="text" class="form-control" id="stream" required pattern="[A-Za-z]{3,}" title="Characters Only">
+                            <input type="text" class="form-control" id="stream" required pattern="[A-Za-z]{3,}" title="Characters Only"/>
                     </div>
                     <button type="submit" class="btn btn-default" id="submit" onclick="getData()">Submit</button>
                   </form>

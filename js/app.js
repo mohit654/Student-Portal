@@ -9,7 +9,7 @@ $(document).ready(()=>{
 
 $(document).ready(()=>{
     $("#edit").click(()=>{
-        let id = prompt("Enter the roll No");
+        const id = prompt("Enter the roll No");
         if(sessionStorage.getItem(id) === null){
             alert("No student with id = "+id);
         }else{
@@ -97,13 +97,28 @@ function getData(){
     let pass = document.getElementById('year').value;
     let stream = document.getElementById('stream').value;
 
+    if(name == "" || roll == "" || pass == "" || stream == ""){
+        alert("Fill all the details");
+        return;
+    }
+    if(!name.match(/^[A-Za-z]+$/))
+    {
+        alert("Enter valid name");
+        return;
+    }
+
+    if(pass.length != 4){
+        alert("Enter valid year");
+        return;
+    }
+
     if(sessionStorage.getItem(roll) != null){
         alert("Enter Unique Id");
         exit(0);
     }
 
 
-    let obj = { "name": name, "roll": roll, "pass": pass, "stream": stream};
+    let obj = { "name": `${name}`, "roll": `${roll}`, "pass":`${pass}`, "stream": `${stream}`};
 
     sessionStorage.setItem(roll,JSON.stringify(obj));
 
