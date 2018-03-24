@@ -106,7 +106,16 @@ function getData(){
         alert("Enter valid name");
         return;
     }
-
+    if(!roll.match(/^[0-9]+$/))
+    {
+        alert("Enter valid rollNo");
+        return;
+    }
+    if(!pass.match(/^[0-9]+$/))
+    {
+        alert("Enter valid year");
+        return;
+    }
     if(pass.length != 4){
         alert("Enter valid year");
         return;
